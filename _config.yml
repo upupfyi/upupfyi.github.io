@@ -103,3 +103,7 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+google_analytics:
+  tracking_id: G-NL2CHBR3DX
+  localhost_ignored: true
