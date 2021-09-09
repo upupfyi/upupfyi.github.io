@@ -16,6 +16,8 @@ deploy:
   on:
     branch: main
   local-dir: public
-addons:
-  apt_packages:
-    - pandoc
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install pandoc
+dist: focal
