@@ -29,3 +29,10 @@ npm install hexo-renderer-pandoc --save
 Change the config in `next/_config.yml` (note, math settings are not set in `root/_config.yml` for next theme) and profit! Of course, the first equation should be the Kelly bet 
 
 $$ f^{*}={\frac{bp-q}{b}}={\frac{p(b+1)-1}{b}} $$
+
+# Setup Travis-ci
+Setup travis is mostly trial & error as anything might happen along the way. A few things to note that took me a long time to debug:
+
+1. Travis-ci's default Ubuntu version is pretty old. Use `dist: xxx` in config to change that! If you see something like pandoc smart extension not found, pandoc might be too old with that Ubuntu distro.
+2. Travis-ci could access public git repos as submodules - but, only if it starts with `http(s)`.
+
