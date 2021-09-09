@@ -172,7 +172,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-09-09 05:46:36" itemprop="dateCreated datePublished" datetime="2021-09-09T05:46:36+00:00">2021-09-09</time>
+              <time title="Created: 2021-09-09 20:55:45" itemprop="dateCreated datePublished" datetime="2021-09-09T20:55:45+00:00">2021-09-09</time>
             </span>
 
           
@@ -250,7 +250,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-09 05:46:36" itemprop="dateModified" datetime="2021-09-09T05:46:36+00:00">2021-09-09</time>
+                <time title="Modified: 2021-09-09 20:55:45" itemprop="dateModified" datetime="2021-09-09T20:55:45+00:00">2021-09-09</time>
               </span>
 
           
@@ -274,6 +274,12 @@
 <p>Change the rendering engine <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save </span><br><span class="line">npm install hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure></p>
 <p>Change the config in <code>next/_config.yml</code> (note, math settings are not set in <code>root/_config.yml</code> for next theme) and profit! Of course, the first equation should be the Kelly bet</p>
 <p><span class="math display">\[ f^{*}={\frac{bp-q}{b}}={\frac{p(b+1)-1}{b}} \]</span></p>
+<h1 id="setup-travis-ci">Setup Travis-ci</h1>
+<p>Setup travis is mostly trial &amp; error as anything might happen along the way. A few things to note that took me a long time to debug:</p>
+<ol type="1">
+<li>Travis-ci's default Ubuntu version is pretty old. Use <code>dist: xxx</code> in config to change that! If you see something like pandoc smart extension not found, pandoc might be too old with that Ubuntu distro.</li>
+<li>Travis-ci could access public git repos as submodules - but, only if it starts with <code>http(s)</code>.</li>
+</ol>
 
       
     </div>
