@@ -16,3 +16,6 @@ deploy:
   on:
     branch: main
   local-dir: public
+addons:
+  apt_packages:
+    - pandoc
